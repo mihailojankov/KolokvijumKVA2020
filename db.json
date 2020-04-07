@@ -1,0 +1,76 @@
+{
+  "korisnik": [
+     {
+        "id": 1,
+        "korisnickoIme": "ppetar",
+        "email": "petar@email.com",
+        "lozinka": "123456"
+     },
+     {
+        "id": 2,
+        "korisnickoIme": "marko34",
+        "email": "marko34@snail.com",
+        "lozinka": "lozinka"
+     },
+     {
+        "id": 3,
+        "korisnickoIme": "stefan12",
+        "email": "stefan12@email.com",
+        "lozinka": "654321"
+     },
+     {
+        "id": 4,
+        "korisnickoIme": "nikola",
+        "email": "nikola@nikola.com",
+        "lozinka": "nikola!"
+     }
+  ],
+  "pravoPristupa": [
+     {
+        "id": 1,
+        "naziv": "Administrator"
+     },
+     {
+        "id": 2,
+        "naziv": "Menadžer"
+     },
+     {
+        "id": 3,
+        "naziv": "Radnik"
+     },
+     {
+        "id": 4,
+        "naziv": "Korisnik"
+     }
+  ],
+  "dodeljenoPravo": [
+     {
+        "id": 1,
+        "korisnikId": 1,
+        "pravoPristupaId": 3,
+        "datumDodele": "2020-01-06",
+        "datumOpoziva": null
+     },
+     {
+        "id": 2,
+        "korisnikId": 1,
+        "pravoPristupaId": 1,
+        "datumDodele": "2020-02-16",
+        "datumOpoziva": "2020-02-30"
+     },
+     {
+        "id": 3,
+        "korisnikId": 2,
+        "pravoPristupaId": 4,
+        "datumOcene": "2020-02-03",
+        "datumOpoziva": null
+     },
+     {
+        "id": 4,
+        "korisnikId": 1,
+        "pravoPristupaId": 1,
+        "datumOcene": "2020-03-26",
+        "datumOpoziva": null
+     }
+  ]
+}
