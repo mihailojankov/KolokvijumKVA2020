@@ -1,0 +1,75 @@
+{
+  "operater": [
+    {
+      "id": 1,
+      "naziv": "Telekom",
+      "pozivniBroj": "064 3"
+    },
+    {
+      "id": 2,
+      "naziv": "Telenor",
+      "pozivniBroj": "063"
+    },
+    {
+      "id": 3,
+      "naziv": "Vip",
+      "pozivniBroj": "060"
+    }
+  ],
+  "paket": [
+    {
+      "id": 1,
+      "operaterId": 1,
+      "naziv": "Osnovni paket",
+      "cena": 249.99
+    },
+    {
+      "id": 2,
+      "operaterId": 3,
+      "naziv": "Napredni paket",
+      "cena": 299.99
+    },
+    {
+      "id": 3,
+      "operaterId": 3,
+      "naziv": "Internet paket",
+      "cena": 700
+    },
+    {
+      "id": 4,
+      "operaterId": 2,
+      "naziv": "Sms paket",
+      "cena": 120
+    }
+  ],
+  "korisnik": [
+    {
+      "id": 1,
+      "broj": "060/123456",
+      "paketId": 3,
+      "datumPrijave": "2020-02-06",
+      "datumOdjave": null
+    },
+    {
+      "id": 2,
+      "broj": "064/123456",
+      "paketId": 1,
+      "datumPrijave": "2020-01-16",
+      "datumOdjave": null
+    },
+    {
+      "id": 3,
+      "broj": "064/654321",
+      "paketId": 1,
+      "datumPrijave": "2020-04-03",
+      "datumOdjave": "3123-12-12"
+    },
+    {
+      "id": 4,
+      "broj": "064/000000",
+      "paketId": 1,
+      "datumPrijave": "2020-03-26",
+      "datumOdjave": null
+    }
+  ]
+}

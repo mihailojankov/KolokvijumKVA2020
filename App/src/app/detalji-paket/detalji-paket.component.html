@@ -1,0 +1,33 @@
+<div class="container">
+    {{item.id}}
+    {{item.operaterId}}
+    {{item.naziv}}
+    {{item.cena}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+	<select formControlName="operaterId">
+        <option *ngFor="let item of items" [value]="item.id">{{item.naziv}}</option> 
+    </select>
+    <br>
+    <input type="text" formControlName="naziv" placeholder="naziv" required>
+    <br>
+    <input type="number" formControlName="cena" placeholder="cena" step="0.01" required>
+    <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>
+
+<br>
+<br>
+<br>
+
+<div *ngIf="korisniciZaPaket">
+    <ol *ngFor="let item of korisniciZaPaket">
+        <li><app-sablon-za-broj [broj]=item.broj></app-sablon-za-broj> | {{item.datumPrijave}} | {{item.datumOdjave}}</li>
+    </ol>
+</div>

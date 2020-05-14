@@ -1,0 +1,26 @@
+<div class="container">
+    {{item.id}}
+    {{item.broj}}
+    {{item.paketId}}
+    {{item.datumPrijave}}
+    {{item.datumOdjave}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+	<select formControlName="paketId">
+        <option *ngFor="let item of items" [value]="item.id">{{item.naziv}}</option> 
+    </select>
+    <br>
+    <input type="text" formControlName="broj" placeholder="broj" required>
+    <br>
+    <input type="date" formControlName="datumPrijave" placeholder="datumPrijave" required>
+    <br>
+    <input type="date" formControlName="datumOdjave" placeholder="datumOdjave" required>
+    <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>

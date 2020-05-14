@@ -1,0 +1,19 @@
+<div class="container">
+    {{item.id}}
+    {{item.naziv}}
+    {{item.pozivniBroj}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+    <br>
+        <input type="text" formControlName="naziv" placeholder="naziv" required>
+        <br>
+        <input type="text" formControlName="pozivniBroj" placeholder="pozivniBroj" required>
+        <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>

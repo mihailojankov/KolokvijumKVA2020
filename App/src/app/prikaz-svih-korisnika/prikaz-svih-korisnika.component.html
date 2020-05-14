@@ -1,0 +1,30 @@
+<div class="container">
+    <div *ngFor="let item of items">
+        {{item.id}}
+        <app-sablon-za-broj [broj]=item.broj></app-sablon-za-broj>
+        {{item.paketId}}
+        {{item.datumPrijave}}
+        {{item.datumOdjave}}
+        <button (click)="obrisi(item.id)">Obrisi</button>
+        <button (click)="detalji(item.id)">Detalji</button>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div>
+    <form [formGroup]="dodajForm" (ngSubmit)="dodaj(dodajForm.value)" ngNativeValidate>
+        <select formControlName="paketId">
+            <option *ngFor="let item of items2" [value]="item.id">{{item.naziv}}</option> 
+        </select>
+        <br>
+        <input type="text" formControlName="broj" placeholder="broj" required>
+        <br>
+        <input type="date" formControlName="datumPrijave" placeholder="datumPrijave" required>
+        <br>
+        <input type="date" formControlName="datumOdjave" placeholder="datumOdjave" required>
+        <br>
+        <input type="submit" value="Dodaj">
+    </form>
+</div>
